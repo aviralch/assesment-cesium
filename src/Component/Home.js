@@ -220,11 +220,11 @@ export default function Home() {
             />
             <div className={classes.totalCostContainer}>
               <Typography className={classes.totalCost} variant="h6">
-                Total cost: {amount}{" "}
+                Total cost: {" "}
               </Typography>
 
               <Typography className={classes.totalCost} variant="h6">
-                $0
+                $  {amount}
               </Typography>
             </div>
           </Grid>
