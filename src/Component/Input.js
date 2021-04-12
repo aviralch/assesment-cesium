@@ -49,6 +49,11 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
+/*** 
+ * @return 
+ * renders the input area for adding in new materials 
+ */
+
 export default function Form({selectedData, onChangeFieldValue}) {
     const classes = useStyles();
     return (

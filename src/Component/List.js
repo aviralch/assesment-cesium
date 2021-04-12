@@ -38,6 +38,11 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
+/*** 
+ * @return 
+ * renders the list of already present items
+ */
+
 export default function Lists({dataList, selectedData, onSelectItem}) {
     const classes = useStyles();
 

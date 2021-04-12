@@ -1,8 +1,22 @@
 
 # Implementations :
 
-Was able to implement the UI and UX into the webapp. Unfortunately due to the time constraints was not able 
-to add in the the testing and fix one bug where the total cost is not being updated.
+To start the project locally :
+1. git clone https://github.com/aviralch/assesment-cesium.git
+2. npm install 
+3. npm start 
+
+The user is able 
+● Display the current list of materials
+● Allow the user to create, edit, and delete materials
+● Select a material's color through a color picker
+● Calculate and display the total value of materials listed (Calculated as volume * cost)
+
+We use redux to save the state of Materials in the front end.
+
+Some breif documentation is given indicating what each function does. 
+
+Was not able to add in some tests in time but tested the functions manually.
 
 
 # Getting Started with Create React App

@@ -60,19 +60,29 @@ export default function Home() {
     const [reload, setReload] = useState(false);
     const [dataList, setDataList] = useState([]);
     const [selectedData, setSelectedData] = useState(null)
-    var amount = 0;
+    const [amount, setAmount] = useState(0);
 
     /***
      * @summary
      *  updates the redux local storage every time, which is keeping track of the the
-     *  state or the items currently added in 
+     *  state or the items currently added in, also calculates the total cost 
      */   
     useEffect(() => {
         if (localStorage.getItem('data') !== undefined || localStorage.getItem('data') !== null) {
             const data = JSON.parse(localStorage.getItem('data'))
+            var i;
+            var temp = 0
+            for (i = 0; i < data.length; i++) {
+                var cost = Number(data[i]['cost'])
+                var vol = Number(data[i]['volume'])
+                temp = temp + cost * vol
+            } 
             setDataList(data)
+            setAmount(temp)
         }
+
     }, [reload])
+
 
     /***
      * @summary
@@ -183,7 +193,7 @@ export default function Home() {
                         <Lists dataList={dataList} selectedData={selectedData} onSelectItem={onSelectItem}/>
                         <div className={classes.totalCostContainer}>
                             <Typography className={classes.totalCost}
-                                        variant="h6">Total cost:</Typography>
+                                        variant="h6">Total cost: {amount} </Typography>
 
                             <Typography className={classes.totalCost}
                                         variant="h6">$0</Typography>

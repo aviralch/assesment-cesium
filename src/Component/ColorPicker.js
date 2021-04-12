@@ -4,11 +4,10 @@ import onClickOutside from 'react-onclickoutside';
 
 /***
  * @summary
- * main component of the app. Uses redux to track state management for materials added to the list
- * with different functions handling the addition, deletion, and edit materials part of the logic
+ * Color Picker and style. Handles on click event and selection 
  * 
  * @return 
- * renders the HTML and CSS wrt to the Redux state. Renders the root page of the application 
+ * renders Color Picker selection
  */
 
 class ColorPicker extends Component {
