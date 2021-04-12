@@ -3,8 +3,11 @@
 
 To start the project locally :
 1. git clone https://github.com/aviralch/assesment-cesium.git
+2. cd assesment-cesium
 2. npm install 
 3. npm start 
+4. open browser and go to http://localhost:3000/
+
 
 The user is able 
 ● Display the current list of materials
